@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Vanguardia_Projecto_Trazos_Relieves_Grupo5.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <!-- Include Bootstrap and other shared libraries -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+        <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <!-- Morris -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="js/CSS_Scripts/js/jquery-3.1.1.min.js"></script>
+    <script src="js/CSS_Scripts/js/bootstrap.js"></script>
+    <script src="js/CSS_Scripts/js/popper.min.js"></script>
+            <!-- Sweet alert -->
+<script src="js/CSS_Scripts/js/plugins/sweetalert/sweetalert.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="profile-element">
+                            <img alt="image" class="rounded-circle" src="logoProyectoTrazosYRelieves.jpg" />
+                            <span class="block m-t-xs font-bold"><%= Session["nombre"] %></span>
+                        </div>
+                    </li>
+
+                    <li class="active">
+                        <a href="principal.aspx"><i class="fa fa-th-large"></i><span class="nav-label">Dashboards</span></a>
+                    </li>
+                    <li>
+                        <a href="Ventas.aspx"><i class="fa fa-bar-chart-o"></i><span class="nav-label">Ventas</span></a>
+                    </li>
+                    <li>
+                        <a href="Productos.aspx"><i class="fa fa-shopping-cart"></i><span class="nav-label">Productos</span></a>
+                    </li>
+                    <li>
+                        <a href="Clientes.aspx"><i class="fa fa-globe"></i><span class="nav-label">Clientes</span></a>
+                    </li>
+                    <li>
+                        <a href="Inventario.aspx"><i class="fa fa-table"></i><span class="nav-label">Inventario</span></a>
+                    </li>
+                    <li>
+                        <a href="Reportes.aspx"><i class="fa fa-files-o"></i><span class="nav-label">Reportes</span></a>
+                    </li>
+                    <li>
+                        <a href="Declaraciones.aspx"><i class="fa fa-envelope"></i><span class="nav-label">Declaraciones </span><span class="label label-warning float-right">16/24</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <div class="ibox-content">
+                                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                                    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server" />
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
